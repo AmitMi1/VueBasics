@@ -61,11 +61,12 @@ export default {
             this.users.splice(userIdx, 1)
         },
         addUser() {
-            if (!this.userName.trim()) return
+            this.userName = this.userName.trim()
+            if (!this.userName) return
             this.userPos++
             if (this.userPos > 8) this.userPos = 1
             const user = {
-                name: this.userName,
+                name: this.userName[0].toUpperCase() + this.userName.substring(1),
                 img: `img/u${this.userPos}.png`,
                 shows: [
                     'Lost',
