@@ -3,7 +3,6 @@ export default {
     template: `
     <ul>
         <h2>Favorite shows</h2>
-        <hr>
         <li v-for="show in shows">
             <div>{{show}}</div>
         </li>

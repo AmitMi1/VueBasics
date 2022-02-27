@@ -1,7 +1,7 @@
 export default {
     props: ['time'],
     template: `
-            <div class="box countdown">
+            <div title="Toggle dark mode" v-bind:class="boxStyle" v-on:click="setDark" class="box countdown">
                 <div>
                 <h1>COUNTDOWN</h1>
                 </div>
@@ -15,7 +15,8 @@ export default {
         return {
             currTime: Date.now(),
             m: null,
-            s: null
+            s: null,
+            isDark: false
         }
     },
     created() {
@@ -36,6 +37,9 @@ export default {
             var audio = new Audio('sound/ring.wav')
             audio.play()
             this.$emit('due', `Times's up`)
+        },
+        setDark() {
+            this.isDark = !this.isDark
         }
 
     },
@@ -53,5 +57,8 @@ export default {
                 return `0${this.s % 60}`
             return this.s % 60
         },
+        boxStyle() {
+            return { dark: this.isDark }
+        }
     }
 }
