@@ -7,7 +7,7 @@ const options = {
     template: `
         <weather-timer></weather-timer>
         <hr>
-        <count-down v-on:due="timeUp" v-bind:time="Date.now() + 1000 * 5"></count-down>
+        <count-down v-on:due="timeUp" v-bind:time="Date.now() + 1000 * 15"></count-down>
         <who-watch></who-watch>
 `,
     data() {
