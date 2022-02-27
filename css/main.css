@@ -81,5 +81,10 @@ input{
     border-radius: 5px;
 }
 
+button{
+    text-align: center !important;
+    aspect-ratio: 1/1;
+    font-size: 20px !important;
+}
 
 
