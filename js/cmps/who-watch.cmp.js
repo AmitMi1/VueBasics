@@ -41,11 +41,19 @@ export default {
                         'The Blacklist'
                     ]
                 },
+                {
+                    name: 'Shuki',
+                    img: 'img/u4.png',
+                    shows: [
+                        'Friends',
+                        'How I Met Your Mother'
+                    ]
+                },
             ],
             isUserShown: true,
             currUser: null,
             userName: '',
-            userPos: 3,
+            userPos: 4,
         }
     },
     created() {
